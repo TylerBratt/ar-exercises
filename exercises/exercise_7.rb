@@ -10,3 +10,14 @@ puts "Exercise 7"
 puts "----------"
 
 # Your code goes here ...
+puts "Add your store"
+store_name = gets.chomp
+
+store6 = Store.create({
+:name => store_name,
+:annual_revenue => -100000,
+:mens_apparel => true,
+:womens_apparel => false
+})
+
+puts store6.errors.full_messages
